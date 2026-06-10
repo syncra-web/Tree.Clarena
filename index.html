@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarena Makeup · Links</title>
+  <meta name="description" content="Clarena Makeup — maquilladora profesional en Cali, Colombia. Reservá tu cita, conocé el estudio y seguí su trabajo.">
+  <meta name="theme-color" content="#6D1F17">
+  <link rel="icon" type="image/png" href="assets/logos/symbol-falu.png">
+
+  <meta property="og:title" content="Clarena Makeup · Links">
+  <meta property="og:description" content="Maquilladora profesional en Cali, Colombia. Reservá tu cita y conocé el estudio.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/patterns/monograma-falu-mulberry.png">
+
+  <link rel="preload" href="assets/fonts/GalanoGrotesque-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SentientVariable-Italic.ttf" as="font" type="font/ttf" crossorigin>
+
+  <style>
+    /* ============ Fuentes oficiales (brandbook CasaCrea) ============ */
+    @font-face {
+      font-family: 'Bickham Script Pro';
+      src: url('assets/fonts/BickhamScriptPro-Regular.ttf') format('truetype');
+      font-weight: 400; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Sentient';
+      src: url('assets/fonts/SentientVariable-Italic.ttf') format('truetype');
+      font-weight: 200 700; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Galano Grotesque';
+      src: url('assets/fonts/GalanoGrotesque-Light.otf') format('opentype');
+      font-weight: 300; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Galano Grotesque';
+      src: url('assets/fonts/GalanoGrotesque-Medium.otf') format('opentype');
+      font-weight: 500; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Galano Grotesque';
+      src: url('assets/fonts/GalanoGrotesque-Bold.otf') format('opentype');
+      font-weight: 700; font-display: swap;
+    }
+
+    /* ============ Identidad ============ */
+    :root {
+      --falu: #6D1F17;
+      --falu-deep: #571812;
+      --mulberry: #BB4C95;
+      --goldenrod: #A98340;
+      --goldenrod-soft: #C2A268;
+      --goldenrod-pale: #EADFC9;
+      --ivory: #FAF5EC;
+      --cream: #F3ECDD;
+      --night: #141414;
+      --silver: #C6C5C0;
+
+      --f-script: 'Bickham Script Pro', cursive;
+      --f-display: 'Sentient', Georgia, serif;
+      --f-sans: 'Galano Grotesque', 'Helvetica Neue', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--f-sans);
+      background-color: var(--falu);
+      background-image: url('assets/patterns/monograma-falu-mulberry.png');
+      background-size: 820px 512px;
+      background-position: center top;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--ivory);
+      animation: drift 150s linear infinite;
+    }
+    @keyframes drift {
+      to { background-position: center -512px; }
+    }
+
+    /* Velo radial: oscurece bordes y asienta la columna central */
+    .veil {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 120% 90% at 50% 0%, rgba(109,31,23,0) 28%, rgba(87,24,18,.6) 100%),
+        linear-gradient(180deg, rgba(87,24,18,.3) 0%, rgba(87,24,18,0) 22%, rgba(87,24,18,0) 68%, rgba(87,24,18,.5) 100%);
+    }
+
+    /* Grano de papel sobre toda la pieza */
+    .grain {
+      position: fixed; inset: 0; z-index: 3; pointer-events: none;
+      opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Marco editorial fijo, como página de brandbook */
+    .frame {
+      position: fixed; inset: 11px; z-index: 4; pointer-events: none;
+      border: 1px solid rgba(250,245,236,.18);
+      border-radius: 18px;
+    }
+
+    .page {
+      position: relative; z-index: 1;
+      width: 100%;
+      max-width: 460px;
+      padding: clamp(44px, 9vh, 76px) 26px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    /* ============ Cabecera ============ */
+    .seal {
+      position: relative;
+      width: 96px; height: 96px;
+      background: linear-gradient(160deg, #FFFCF5 0%, var(--ivory) 55%, #EFE6D2 100%);
+      border-radius: 28px;
+      display: grid; place-items: center;
+      box-shadow:
+        0 0 0 1px rgba(169,131,64,.85),
+        0 0 0 7px rgba(250,245,236,.1),
+        0 0 70px rgba(169,131,64,.4),
+        0 20px 44px rgba(20,20,20,.38);
+    }
+    .seal::after {
+      content: '';
+      position: absolute; inset: 5px;
+      border: 1px solid rgba(169,131,64,.4);
+      border-radius: 23px;
+    }
+    .seal img { width: 48px; height: auto; display: block; }
+
+    .wordmark { margin-top: 28px; }
+    .wordmark img {
+      width: min(228px, 60vw); height: auto; display: block;
+      filter: drop-shadow(0 4px 18px rgba(20,20,20,.35));
+    }
+
+    .script-line {
+      font-family: var(--f-script);
+      color: var(--goldenrod-soft);
+      font-size: clamp(32px, 8.5vw, 40px);
+      line-height: 1;
+      margin-top: 16px;
+      transform: rotate(-2deg);
+      text-shadow: 0 2px 24px rgba(20,20,20,.3);
+    }
+
+    /* Ornamento: hairline — ✦ — hairline */
+    .ornament {
+      margin-top: 22px;
+      display: flex; align-items: center; gap: 12px;
+      color: var(--goldenrod-soft);
+      font-size: 11px;
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      height: 1px; width: 58px;
+    }
+    .ornament::before { background: linear-gradient(to left,  rgba(194,162,104,.65), transparent); }
+    .ornament::after  { background: linear-gradient(to right, rgba(194,162,104,.65), transparent); }
+
+    .eyebrow {
+      margin-top: 14px;
+      font-size: clamp(9px, 2.7vw, 11px);
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(250,245,236,.8);
+      white-space: nowrap;
+    }
+
+    /* ============ Links ============ */
+    .links {
+      list-style: none;
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 17px 20px;
+      border-radius: 17px;
+      text-decoration: none;
+      background: linear-gradient(165deg, #FFFCF5 0%, var(--ivory) 60%, #F1E8d4 100%);
+      color: var(--night);
+      border: 1px solid rgba(169,131,64,.4);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.5),
+        0 1px 2px rgba(20,20,20,.18),
+        0 12px 30px rgba(20,20,20,.24);
+      transition: transform .28s cubic-bezier(.22,.8,.3,1), box-shadow .28s ease, border-color .28s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(169,131,64,.75);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.5),
+        0 1px 2px rgba(20,20,20,.18),
+        0 18px 40px rgba(20,20,20,.34);
+    }
+    .card:active { transform: translateY(0) scale(.985); }
+
+    .card .icon {
+      flex: none;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      border: 1px solid rgba(169,131,64,.55);
+      color: var(--falu);
+      background: rgba(255,255,255,.35);
+      transition: background .28s ease, color .28s ease, border-color .28s ease;
+    }
+    .card:hover .icon {
+      background: var(--goldenrod);
+      border-color: var(--goldenrod);
+      color: var(--ivory);
+    }
+    .card .icon svg { width: 21px; height: 21px; display: block; }
+
+    .card .txt { flex: 1; min-width: 0; }
+    .card .txt strong {
+      display: block;
+      font-weight: 500;
+      font-size: 16.5px;
+      letter-spacing: .015em;
+    }
+    .card .txt span {
+      display: block;
+      margin-top: 3px;
+      font-family: var(--f-display);
+      font-style: italic;
+      font-weight: 320;
+      font-size: 13.5px;
+      letter-spacing: .02em;
+      color: rgba(109,31,23,.68);
+      line-height: 1.45;
+    }
+
+    .card .arrow {
+      flex: none;
+      color: var(--goldenrod);
+      transition: transform .28s ease;
+    }
+    .card:hover .arrow { transform: translateX(4px); }
+    .card .arrow svg { width: 16px; height: 16px; display: block; }
+
+    /* Card primaria — WhatsApp */
+    .card--primary {
+      background: linear-gradient(135deg, #B89154 0%, var(--goldenrod) 50%, #8A6A30 100%);
+      color: var(--ivory);
+      border-color: rgba(250,245,236,.45);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.25),
+        0 1px 2px rgba(20,20,20,.2),
+        0 14px 34px rgba(20,20,20,.32);
+    }
+    .card--primary .txt strong {
+      font-size: 17.5px;
+      letter-spacing: .03em;
+      text-shadow: 0 1px 10px rgba(87,24,18,.25);
+    }
+    .card--primary .icon {
+      border-color: rgba(250,245,236,.6);
+      color: var(--ivory);
+      background: rgba(255,255,255,.12);
+    }
+    .card--primary:hover .icon {
+      background: var(--ivory);
+      border-color: var(--ivory);
+      color: var(--goldenrod);
+    }
+    .card--primary .arrow { color: var(--ivory); }
+
+    /* Sheen sutil que recorre el CTA cada tanto */
+    .card--primary::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(115deg, transparent 32%, rgba(255,255,255,.28) 50%, transparent 68%);
+      transform: translateX(-130%);
+      animation: sheen 6s ease-in-out 2.4s infinite;
+      pointer-events: none;
+    }
+    @keyframes sheen {
+      0%   { transform: translateX(-130%); }
+      28%  { transform: translateX(130%); }
+      100% { transform: translateX(130%); }
+    }
+
+    /* ============ Fila secundaria ============ */
+    .minor {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    .pill {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(194,162,104,.45);
+      color: var(--goldenrod-pale);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: background .25s ease, border-color .25s ease, color .25s ease;
+    }
+    .pill:hover {
+      background: rgba(169,131,64,.22);
+      border-color: rgba(194,162,104,.85);
+      color: var(--ivory);
+    }
+    .pill svg { width: 15px; height: 15px; display: block; }
+
+    /* ============ Footer ============ */
+    footer {
+      position: relative; z-index: 1;
+      margin-top: auto;
+      padding: 26px 24px 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 11px;
+    }
+    footer .ornament { margin-top: 0; }
+    footer img { width: 17px; height: auto; opacity: .6; }
+    footer p {
+      font-size: 10.5px;
+      font-weight: 300;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(250,245,236,.55);
+    }
+
+    /* ============ Reveal escalonado ============ */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .r { opacity: 0; animation: rise .7s cubic-bezier(.22,.8,.3,1) forwards; }
+    .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; }
+    .d3 { animation-delay: .25s; } .d4 { animation-delay: .33s; }
+    .d5 { animation-delay: .41s; } .d6 { animation-delay: .49s; }
+    .d7 { animation-delay: .57s; } .d8 { animation-delay: .65s; }
+    .d9 { animation-delay: .75s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
+      .r { animation: none; opacity: 1; }
+      .card--primary::after { animation: none; }
+      .card, .icon, .arrow, .pill { transition: none; }
+    }
+
+    @media (max-width: 360px) {
+      .page { padding-left: 20px; padding-right: 20px; }
+      .frame { inset: 8px; border-radius: 14px; }
+      .eyebrow { letter-spacing: .12em; }
+      .card .txt strong { font-size: 15.5px; }
+      .card--primary .txt strong { font-size: 16.5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="frame" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <div class="seal r d1">
+      <img src="assets/logos/symbol-falu.png" alt="Monograma de Clarena Makeup" width="392" height="491">
+    </div>
+
+    <div class="wordmark r d2">
+      <img src="assets/logos/wordmark-white.png" alt="Clarena Makeup" width="1112" height="266">
+    </div>
+
+    <p class="script-line r d3">Naturally, Natural</p>
+
+    <div class="ornament r d4" aria-hidden="true">✦</div>
+
+    <p class="eyebrow r d4">Maquilladora profesional · Cali, Colombia</p>
+
+    <ul class="links">
+      <li class="r d5">
+        <a class="card card--primary" href="https://wa.me/573113885645" target="_blank" rel="noopener" aria-label="Reservá tu cita por WhatsApp">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3a8.2 8.2 0 1 1 7.1 3.8Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1a6.8 6.8 0 0 1-3.4-3c-.3-.4 0-.6.1-.8l.4-.5c.1-.2.2-.3.3-.5v-.5L9.5 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.2-.2-.2-.5-.4Z"/></svg>
+          </span>
+          <span class="txt">
+            <strong>Reservá tu cita</strong>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </span>
+        </a>
+      </li>
+
+      <li class="r d6">
+        <a class="card" href="https://www.clarenamakeupstudio.com/" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18"/></svg>
+          </span>
+          <span class="txt">
+            <strong>Página web</strong>
+            <span>clarenamakeupstudio.com</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </span>
+        </a>
+      </li>
+
+      <li class="r d7">
+        <a class="card" href="https://www.instagram.com/clarenamakeup/" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="txt">
+            <strong>Instagram</strong>
+            <span>@clarenamakeup</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </span>
+        </a>
+      </li>
+
+      <li class="r d8">
+        <a class="card" href="https://maps.app.goo.gl/8WbwKCZxoLbrNuAj6" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          </span>
+          <span class="txt">
+            <strong>Cómo llegar al estudio</strong>
+            <span>Te esperamos en Randa&nbsp;Studio</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="minor r d9">
+      <a class="pill" href="https://www.facebook.com/clarenamakeup/" target="_blank" rel="noopener" aria-label="Facebook de Clarena Makeup">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.9h-2.8V9.2c0-.8.2-1.4 1.4-1.4h1.5V5.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.2H8v2.9h2.5v7h3Z"/></svg>
+        Facebook
+      </a>
+      <a class="pill" href="https://hotmart.com/es/marketplace/productos/curso-de-automaquillaje-basico-con-clarena-makeup/T82345777F" target="_blank" rel="noopener" aria-label="Curso de automaquillaje de Clarena en Hotmart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s1 2.4 1 4a3.5 3.5 0 0 1-.6 2c.9-.3 1.8-1 2.3-2 1.5 1.6 2.8 3.8 2.8 6a5.5 5.5 0 0 1-11 0c0-3.5 2.6-6.6 5.5-10Z"/></svg>
+        Hotmart
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="r d9">
+    <div class="ornament" aria-hidden="true">
+      <img src="assets/logos/symbol-white.png" alt="">
+    </div>
+    <p>© 2026 Clarena Makeup · Cali, Colombia</p>
+  </footer>
+
+</body>
+</html>
