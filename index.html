@@ -70,7 +70,7 @@
       font-family: var(--f-sans);
       background-color: var(--falu);
       background-image: url('assets/patterns/monograma-seamless.png');
-      background-size: 128px 77px;
+      background-size: 64px 38.5px;
       background-position: center top;
       min-height: 100dvh;
       display: flex;
@@ -79,7 +79,7 @@
       color: var(--ivory);
       animation: drift 32s linear infinite;
     }
-    /* el loop avanza exactamente un tile (77px) -> sin salto visible */
+    /* el loop avanza 2 tiles exactos (2 x 38.5px = 77px) -> sin salto visible */
     @keyframes drift {
       to { background-position: center -77px; }
     }
